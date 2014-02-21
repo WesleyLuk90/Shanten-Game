@@ -773,12 +773,16 @@ var mj = (function() {
 			var tileSet = new mj.TileSet();
 			for (var i = 0; i < TYPES_OF_TILES; i++) {
 				hand.add(i);
-				var newShanten = new mj.ShantenCalc(hand).get();
-				// console.log(newShanten, currentShanten, i); 
-				if (newShanten < currentShanten) {
-					tileSet.add(i);
+				try {
+					var newShanten = new mj.ShantenCalc(hand).get();
+					// console.log(newShanten, currentShanten, i); 
+					if (newShanten < currentShanten) {
+						tileSet.add(i);
+					}
+					hand.remove(i);
+				} catch (e) {
+					continue
 				}
-				hand.remove(i);
 			}
 			return tileSet;
 		}
@@ -958,4 +962,3 @@ jQuery(function($) {
 
 	resetRound();
 });
-
