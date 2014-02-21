@@ -1,0 +1,9 @@
+.tiles img {
+	width:46px;
+	height:70px;
+}
+
+.tiles img:last-child {
+	margin-left:20px;
+
+}
