@@ -2,6 +2,8 @@ CACHE MANIFEST
 script.js
 style.css
 
+jquery-1.11.0.min.js
+
 css/bootstrap.min.css
 css/bootstrap-theme.min.css
 js/bootstrap.min.js
